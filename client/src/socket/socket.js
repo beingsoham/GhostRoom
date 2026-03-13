@@ -1,8 +1,7 @@
 import { io } from "socket.io-client";
 
-// Connect to our backend server
-const socket = io("http://localhost:5000", {
-  autoConnect: false // we manually connect when user enters a room
+const socket = io("https://ghostroom-ee49.onrender.com", {
+  autoConnect: false
 });
 
 export default socket;
