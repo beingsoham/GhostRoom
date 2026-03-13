@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:            #060818;
+  --surface:       rgba(255, 255, 255, 0.04);
+  --surface-2:     rgba(255, 255, 255, 0.07);
+  --surface-3:     rgba(255, 255, 255, 0.02);
+  --border:        rgba(255, 255, 255, 0.08);
+  --border-bright: rgba(255, 255, 255, 0.15);
+  --text:          #e8eaf6;
+  --text-muted:    rgba(200, 210, 240, 0.45);
+  --text-dim:      rgba(150, 160, 200, 0.2);
+  --teal:          #2dd4bf;
+  --teal-dim:      rgba(45, 212, 191, 0.12);
+  --teal-glow:     0 0 24px rgba(45, 212, 191, 0.2);
+  --purple:        #a78bfa;
+  --purple-dim:    rgba(167, 139, 250, 0.12);
+  --purple-glow:   0 0 24px rgba(167, 139, 250, 0.2);
+  --blue:          #60a5fa;
+  --danger:        #f87171;
+  --font-mono:     'DM Mono', monospace;
+  --font-body:     'Plus Jakarta Sans', sans-serif;
+  --radius:        14px;
+  --radius-sm:     8px;
+  --radius-lg:     20px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.2s ease;
+}
+
+input {
+  font-family: var(--font-body);
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 99px;
+}
+
+::selection {
+  background: var(--teal);
+  color: var(--bg);
+}

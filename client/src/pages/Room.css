@@ -1,0 +1,111 @@
+.room-page {
+  display: flex;
+  height: 100vh;
+  background: #060818;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Aurora in room too — subtle */
+.room-aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.room-aurora .aurora-orb-1 {
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(26, 74, 110, 0.4) 0%, transparent 70%);
+  top: -150px;
+  left: -150px;
+  filter: blur(80px);
+  position: absolute;
+  border-radius: 50%;
+  animation: auroraFloat1 14s ease-in-out infinite alternate;
+}
+
+.room-aurora .aurora-orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(59, 31, 110, 0.35) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(80px);
+  position: absolute;
+  border-radius: 50%;
+  animation: auroraFloat2 18s ease-in-out infinite alternate;
+}
+
+.room-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.room-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 62px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.room-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.room-title {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #e8eaf6 0%, #a78bfa 50%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.3px;
+}
+
+.room-leave-btn {
+  padding: 7px 16px;
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.room-leave-btn:hover {
+  background: rgba(248, 113, 113, 0.08);
+  border-color: var(--danger);
+  box-shadow: 0 0 16px rgba(248, 113, 113, 0.15);
+}
+
+.room-sidebar {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
