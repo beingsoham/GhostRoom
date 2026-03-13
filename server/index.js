@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:5173", // React dev server
+  origin: process.env.CLIENT_URL || "http://localhost:5173",
   methods: ["GET", "POST"]
 }));
 app.use(express.json());
@@ -28,7 +28,7 @@ const httpServer = createServer(app);
 // Attach Socket.io to the HTTP server
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
     methods: ["GET", "POST"]
   }
 });
