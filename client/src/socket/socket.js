@@ -1,6 +1,8 @@
 import { io } from "socket.io-client";
 
-const socket = io("https://ghostroom-ee49.onrender.com", {
+const serverUrl = import.meta.env.VITE_SERVER_URL || "http://localhost:5000";
+
+const socket = io(serverUrl, {
   autoConnect: false
 });
 
